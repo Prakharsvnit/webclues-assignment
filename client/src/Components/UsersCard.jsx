@@ -5,11 +5,8 @@ import userImg from "../user.jpg"
 const UsersCard = ({name, email}) => {
     return (
         <>
-        <div style={{textAlign:'center'}}>
-            <h1>Users List</h1>
-        </div>
         <div style={{display:'flex',justifyContent:'space-between'}}>
-            <div class="card" style={{width: "20rem"}}>
+            <div class="card" style={{width: "21rem",marginBottom:'100px'}}>
                 <img src={userImg} class="card-img-top" alt="..." />
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Name:{name}</li>

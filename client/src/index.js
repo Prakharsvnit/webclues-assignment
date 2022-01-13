@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import CreateUser from "./Components/CreateUser";
-import Users from "./Components/Users";
+import UserDisplay from "./Components/UserDisplay";
 
 const rootElement = document.getElementById("root");
 render(
@@ -14,7 +14,7 @@ render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="create-user" element={<CreateUser />} />
-      <Route path="users" element={<Users />} />
+      <Route path="users" element={<UserDisplay />} />
     </Routes>
   </BrowserRouter>,
   rootElement

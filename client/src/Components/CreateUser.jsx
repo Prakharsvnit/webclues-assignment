@@ -10,7 +10,7 @@ const CreateUser = () => {
         setInputs(values => ({...values, [name]: value}))
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = () => {
         // console.log(Inputs);
         axios.post("http://localhost:3007/create-user",Inputs)
         .then((res) => {
@@ -25,6 +25,7 @@ const CreateUser = () => {
     return (
         <div style={{textAlign: 'center'}}>
         <h1>Registration form</h1>
+        <a href="/"><button type="button" class="btn btn-primary" style={{marginLeft:'30px'}}>Home</button></a>
         <form onSubmit={handleSubmit} >
             <div style={{marginTop: '40px'}}>
             <label>Enter name:</label>
@@ -60,7 +61,7 @@ const CreateUser = () => {
                 <label style={{marginTop:'20px',marginLeft: '100px'}}>Upload Profile Pic</label>
                 <input type='file' style={{marginLeft:'20px'}}/>
             </div>
-                <button style={{marginTop:'20px'}}type="submit"> Submit </button>
+                <input type="submit" style={{marginTop:'20px'}}/>
         </form>
         </div>
     )
